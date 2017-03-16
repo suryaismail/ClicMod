@@ -7,11 +7,11 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class BlockBreakMessage {
 
-    @SubscribeEvent
-    public void sendMessage(BreakEvent event){
-        event.
-            getPlayer()
-            .sendMessage(new TextComponentString(
-            		TextFormatting.RED + "Break my block!"));
-    }
+	@SubscribeEvent
+	public void sendMessage(BreakEvent event){
+		event.
+		getPlayer()
+		.addChatMessage(new TextComponentString(
+				TextFormatting.GREEN + "You killed my father. Prepare to die!"));
+	}
 }
