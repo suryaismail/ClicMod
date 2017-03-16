@@ -12,6 +12,6 @@ public class BlockBreakMessage {
         event.
             getPlayer()
             .sendMessage(new TextComponentString(
-            		TextFormatting.RED + "Don't break my block!"));
+            		TextFormatting.RED + "Break my block!"));
     }
 }
