@@ -15,5 +15,21 @@ public class Main {
 	{
 		MinecraftForge.EVENT_BUS.register(new BlockBreakMessage());
 		MinecraftForge.EVENT_BUS.register(new PlayerWallClimb());
+		
+		// YunZhe
+		MinecraftForge.EVENT_BUS.register(new YunZheMod());
+
+		// Xuan
+		MinecraftForge.EVENT_BUS.register(new DiamondOreTrap());
+
+		// Lewis
+		MinecraftForge.EVENT_BUS.register(new ExplodingAnvil());
+
+		// Arian
+		MinecraftForge.EVENT_BUS.register(new DankSide());
+
+		// Alimi
+		MinecraftForge.EVENT_BUS.register(new CowReinforcements());
+
 	}
 }
