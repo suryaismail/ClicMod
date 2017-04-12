@@ -17,7 +17,7 @@ public class Main {
 		MinecraftForge.EVENT_BUS.register(new PlayerWallClimb());
 		
 		// YunZhe
-		MinecraftForge.EVENT_BUS.register(new YunZheMod());
+		//MinecraftForge.EVENT_BUS.register(new YunZheMod());
 
 		// Xuan
 		MinecraftForge.EVENT_BUS.register(new DiamondOreTrap());
