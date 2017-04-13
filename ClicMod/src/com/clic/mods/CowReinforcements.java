@@ -19,18 +19,18 @@ public class CowReinforcements {
 		}
 
 		for (int i = 0 ; i < 3 ; i++) {
-			EntityZombie zombie = new EntityZombie(event.getEntity().world);
+			EntityZombie zombie = new EntityZombie(event.getEntity().worldObj);
 			zombie.setLocationAndAngles(event.getEntity().posX,
 					event.getEntity().posY,
 					event.getEntity().posZ,
 					0,
 					0);
-			if (!event.getEntity().world.isRemote) {
-				event.getEntity().world.spawnEntity(zombie);
+			if (!event.getEntity().worldObj.isRemote) {
+				event.getEntity().worldObj.spawnEntityInWorld(zombie);
 			}
 		}
 		for (int s = 0 ; s < 2 ; s++) {
-			EntitySkeleton skeleton = new EntitySkeleton(event.getEntity().world);
+			EntitySkeleton skeleton = new EntitySkeleton(event.getEntity().worldObj);
 			skeleton.setLocationAndAngles(event.getEntity().posX,
 					event.getEntity().posY,
 					event.getEntity().posZ,
@@ -41,8 +41,8 @@ public class CowReinforcements {
 			skeleton.setItemStackToSlot(EntityEquipmentSlot.CHEST, new ItemStack(Items.IRON_CHESTPLATE));
 			skeleton.setItemStackToSlot(EntityEquipmentSlot.LEGS, new ItemStack(Items.IRON_LEGGINGS));
 			skeleton.setItemStackToSlot(EntityEquipmentSlot.FEET, new ItemStack(Items.IRON_BOOTS));
-			if (!event.getEntity().world.isRemote) {
-				event.getEntity().world.spawnEntity(skeleton);
+			if (!event.getEntity().worldObj.isRemote) {
+				event.getEntity().worldObj.spawnEntityInWorld(skeleton);
 			}
 		}
 	}
