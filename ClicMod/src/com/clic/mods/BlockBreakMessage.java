@@ -10,7 +10,7 @@ public class BlockBreakMessage {
 	@SubscribeEvent
 	public void sendMessage(BreakEvent event){
 		event.
-		getPlayer().sendMessage(new TextComponentString(
+		getPlayer().addChatMessage(new TextComponentString(
 				TextFormatting.GREEN + "You killed my father. Prepare to die!"));
 	}
 }
