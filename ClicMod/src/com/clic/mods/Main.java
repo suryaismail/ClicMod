@@ -21,6 +21,7 @@ public class Main {
 
 		// Xuan
 		MinecraftForge.EVENT_BUS.register(new DiamondOreTrap());
+		MinecraftForge.EVENT_BUS.register(new PlayerExplode());
 
 		// Lewis
 		MinecraftForge.EVENT_BUS.register(new ExplodingAnvil());

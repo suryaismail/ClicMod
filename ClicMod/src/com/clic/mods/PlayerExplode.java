@@ -13,13 +13,15 @@ public class PlayerExplode {
 
 	@SubscribeEvent
 	public void blowupplayer(PlayerTickEvent event) {
-		if (hasExploded) {
-			return;
-		}
 		EntityPlayer player = event.player;
 		ItemStack item = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
 		if (!item.isItemEqual(new ItemStack(Items.CHAINMAIL_CHESTPLATE))) {
 			hasExploded = false;
+			return;
+		}
+
+		// We are definately wearing chainmail chestplate here
+		if(hasExploded) {
 			return;
 		}
 		player.getEntityWorld().createExplosion(null,
@@ -27,8 +29,6 @@ public class PlayerExplode {
 				player.getPosition().getY(),
 				player.getPosition().getZ(), 10, true);
 		hasExploded = true;
-
-
 
 	}
 }
