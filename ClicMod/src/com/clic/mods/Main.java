@@ -13,16 +13,17 @@ public class Main {
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
+		
 		MinecraftForge.EVENT_BUS.register(new BlockBreakMessage());
 		MinecraftForge.EVENT_BUS.register(new PlayerWallClimb());
 		
 		// YunZhe
-		//MinecraftForge.EVENT_BUS.register(new YunZheMod());
+		MinecraftForge.EVENT_BUS.register(new MuchCoolerExplosions());
 
 		// Xuan
 		MinecraftForge.EVENT_BUS.register(new DiamondOreTrap());
 		MinecraftForge.EVENT_BUS.register(new PlayerExplode());
-
+        
 		// Lewis
 		MinecraftForge.EVENT_BUS.register(new ExplodingAnvil());
 
@@ -31,6 +32,6 @@ public class Main {
 
 		// Alimi
 		MinecraftForge.EVENT_BUS.register(new CowReinforcements());
-
+        
 	}
 }
