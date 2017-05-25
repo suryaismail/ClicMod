@@ -4,6 +4,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
 @Mod(modid = Main.MODID, version = Main.VERSION)
 public class Main {
@@ -31,6 +32,12 @@ public class Main {
 
 		// Alimi
 		MinecraftForge.EVENT_BUS.register(new CowReinforcements());
+
+	}
+	
+	@EventHandler
+	public void registerCommands(FMLServerStartingEvent event) {
+	  event.registerServerCommand(new FlamingPigs());
 
 	}
 }
