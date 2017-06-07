@@ -23,7 +23,7 @@ public class Main {
 	public void init(FMLInitializationEvent event)
 	{
 		
-		MinecraftForge.EVENT_BUS.register(new BlockBreakMessage());
+		// MinecraftForge.EVENT_BUS.register(new BlockBreakMessage());
 		MinecraftForge.EVENT_BUS.register(new PlayerWallClimb());
 		
 		// YunZhe
