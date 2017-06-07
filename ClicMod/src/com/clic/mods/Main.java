@@ -17,6 +17,7 @@ public class Main {
 	public static final String MODID = "clicvengers";
 	public static final String VERSION = "1.0";
 
+	// Put block declaration here
 	public static EnderBlock enderBlock;
 
 	@EventHandler
@@ -45,6 +46,7 @@ public class Main {
 		registerBlocks();
 	}
 	
+	// Put block registration code here
 	private void registerBlocks() {
 		enderBlock = new EnderBlock();
 		GameRegistry.register(enderBlock, new ResourceLocation(MODID, "enderblock"));
